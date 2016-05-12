@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<div class="panel panel-default appDescPannel">
+    <div class="panel-body">
+        <div class="appDescImageFlexContainer">
+            <img ng-if="appDesc.availableImage" ng-src="/images/{{appDesc.img}}" alt="" class="appImage">
+            <img ng-if="!appDesc.availableImage" src="/images/No_image_available_resized.png" alt="" class="appImage">
+        </div>
+        <div>
+            <div class="appDescNameDiv">
+                <b class="appDescName">{{appDesc.name}}</b>
+            </div>
+            Version: {{appDesc.version}}
+            <div class="appDescSeparator"></div>
+            {{appDesc.shortDesc}}
+            <div class="appDescSeparator"></div>
+            <b>Sells: </b>{{appDesc.sells}}
+
+            <!-- {{appDesc.desc}} -->
+
+        </div>
+    </div>
+</div>

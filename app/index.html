@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Made Of Genes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="myTestAppApp">
+        <!--[if lte IE 8]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="header">
+            <!--
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container navBarContainer">
+                    <div class="navBarFlexContainer">
+                        <div class="navBarRightFlexContainer">
+                            <img class="navbar-logo" src="/images/logo-mog_green.png">
+                        </div>
+                        <div class="navBarLeftFlexContainer">
+                            <span class="glyphicon glyphicon-envelope navBarGlyphicon"></span>
+                            <span class="glyphicon glyphicon-user navBarGlyphicon"></span>
+                            <span class="glyphicon glyphicon-bell navBarGlyphicon"></span>
+                            <img src="/images/dr-house.png" class="navBarProfileImage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="navBarLeftFlexContainer">
+                    <img class="navbar-logo" src="/images/logo-mog_green_2.png">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#/" class="navLink">Applications</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/">Consultants</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/">Requests</a>
+                    </li>
+                </ul>
+
+                <div class="navBarRightFlexContainer">
+                    <span class="glyphicon glyphicon-envelope navBarGlyphicon"></span>
+                    <span class="glyphicon glyphicon-user navBarGlyphicon"></span>
+                    <span class="glyphicon glyphicon-bell navBarGlyphicon"></span>
+                    <img src="/images/dr-house.png" class="navBarProfileImage">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div ng-view=""></div>
+        </div>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/services/applist.js"></script>
+        <script src="scripts/directives/appdescription.js"></script>
+        <script src="scripts/directives/appdesclist.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

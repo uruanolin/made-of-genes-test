@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<div>
+    <div class="appDescListHeaderFlexContainer">
+        <div>
+            <b class="appDescListTitle">{{appDescList.apps.length}}
+                Applications</b>
+        </div>
+        <div class="appDescListControlsFlexContainer">
+            <button ng-click="appDescList.sort()" class="btn btn-default">
+                <span ng-if="!appDescList.sortReverse" class="glyphicon glyphicon-chevron-up appDescListIcon"></span>
+                <span ng-if="appDescList.sortReverse" class="glyphicon glyphicon-chevron-down appDescListIcon"></span>
+            </button>
+            <div class="appDescListSearchContainer">
+                <label>Filter:
+                </label>
+                <input class="form-control" ng-model="appDescList.search.name">
+            </div>
+            <button ng-click="appDescList.displayAsMosaic();" class="btn btn-default">
+                <span class="glyphicon glyphicon-th appDescListIcon"></span>
+            </button>
+            <button ng-click="appDescList.displayAsList();" class="btn btn-default">
+                <span class="glyphicon glyphicon-th-list appDescListIcon"></span>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<div class="appDescListSeparator"></div>
+<br>
+
+<div class="appDescListListContainer" ng-if="appDescList.displayMosaic">
+    <app-description
+        displaymosaic="{{appDescList.displayMosaic}}"
+        class="appDescDirectiveFlexItem"
+        ng-if="app.publish"
+        ng-repeat="app in appDescList.apps | orderBy:'name':appDescList.sortReverse | filter:appDescList.search"
+        name="{{app.name}}"
+        shortdesc="{{app.shortdescription}}"
+        desc="{{app.description}}"
+        img="{{app.image}}"
+        sells="{{app.sells}}"
+        version="{{app.version}}"></app-description>
+</div>
+
+<div class="appDescListMosaicContainer" ng-if="!appDescList.displayMosaic">
+    <app-description
+        displaymosaic="{{appDescList.displayMosaic}}"
+        ng-if="app.publish"
+        ng-repeat="app in appDescList.apps | orderBy:'name':appDescList.sortReverse | filter:appDescList.search"
+        name="{{app.name}}"
+        shortdesc="{{app.shortdescription}}"
+        desc="{{app.description}}"
+        img="{{app.image}}"
+        sells="{{app.sells}}"
+        version="{{app.version}}"></app-description>
+</div>

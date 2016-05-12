@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="panel panel-default">
+    <div class="panel-body">
+
+        <div style="display: flex; justify-content: space-around;">
+
+            <img ng-if="appDesc.availableImage" ng-src="/images/{{appDesc.img}}" alt="" class="appImageSmall">
+            <img ng-if="!appDesc.availableImage" src="/images/No_image_available_resized.png" alt="" class="appImageSmall">
+
+            <div class="appDescNameDiv">
+                <b class="appDescName">{{appDesc.name}}</b>
+            </div>
+
+            <div style="display: flex;">
+                <b>Version:
+                </b>
+                {{appDesc.version}}
+            </div>
+
+
+            {{appDesc.shortDesc}}
+
+            <div style="display: flex;">
+                <b>Sells:
+                </b>{{appDesc.sells}}
+            </div>
+
+        </div>
+    </div>
+</div>
